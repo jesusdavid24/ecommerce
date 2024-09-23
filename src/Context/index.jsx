@@ -15,7 +15,7 @@ export const ShoppingCartProvider = ({ children }) => {
   const [isProductDetailOpen, setIsProductDetailOpen] = useState(false);
   const [productToShow, setProductToShow] = useState({});
   const [cartProducts, setCartProducts] = useState([]);
-  const [isCheckoutSideMenu, setCheckoutSideMenu] = useState(false);
+  const [isCheckoutSideMenu, setIsCheckoutSideMenu] = useState(false);
   const [order, setOrder] = useState([]);
   const [searchByTitle, setSearchByTitle] = useState(null);
   const [searchByCategory, setSearchByCategory] = useState(null);
@@ -23,8 +23,8 @@ export const ShoppingCartProvider = ({ children }) => {
   const openProductDetail = () => setIsProductDetailOpen(true);
   const closeProductDetail = () => setIsProductDetailOpen(false);
 
-  const openCheckoutSideMenu = () => setCheckoutSideMenu(true);
-  const closeCheckoutSideMenu = () => setCheckoutSideMenu(false);
+  const openCheckoutSideMenu = () => setIsCheckoutSideMenu(true);
+  const closeCheckoutSideMenu = () => setIsCheckoutSideMenu(false);
 
   useEffect(() => {
     fetch('https://api.escuelajs.co/api/v1/products')
@@ -92,6 +92,7 @@ export const ShoppingCartProvider = ({ children }) => {
       setSearchByCategory,
       openCheckoutSideMenu,
       closeCheckoutSideMenu,
+      setIsCheckoutSideMenu,
     }}>
       {children}
     </ShoppingCartContext.Provider>

@@ -35,7 +35,6 @@ const MyOrder = () => {
         }
       </div>
     </div>
-
   )
 }
 

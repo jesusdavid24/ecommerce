@@ -23,16 +23,16 @@ const Home = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-center relative w-full mb-6">
-        <h1 className="font-medium text-xl">Exclusive Products</h1>
-      </div>
+      <div className="flex flex-col items-center justify-center relative w-full mt-20 mb-3">
+        <h1 className="font-medium mb-6 text-xl">Exclusive Products</h1>
       <input
-        className="rounded-lg border border-black w-full p-4 mb-4"
+        className="flex justify-center items-center rounded-lg border border-black w-80 p-4 mb-4"
         type="text"
         placeholder="Search a product"
         name=""
         onChange={(event) => context.setSearchByTitle(event.target.value)}
       />
+      </div>
       <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
         {renderView()}
       </div>
