@@ -51,7 +51,7 @@ https://api.escuelajs.co/api/v1/products
 1. Clone the Repository
 
 ```
-https://github.com/jesusdavid24/produc-list-frontend.git
+https://github.com/jesusdavid24/ecommerce.git
 ```
 
 2. Navigate to the project directory
